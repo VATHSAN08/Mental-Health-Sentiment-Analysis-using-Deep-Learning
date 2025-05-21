@@ -42,47 +42,38 @@ In the digital era, individuals often express their deepest struggles through on
 
 ### ✅ Data Preprocessing
 
-A robust preprocessing pipeline was implemented to clean and normalize text data, preparing it for effective model training. Key steps include:
+A robust preprocessing pipeline cleaned and normalized text data, including:
 
-* **Contraction Expansion**: Expanding contractions (e.g., "don't" to "do not").
-* **Special Token Replacement**: Replacing URLs (`¡url¿`), user mentions (`¡user¿`), and hashtags (`¡hashtag¿`) with generic tokens.
-* **Acronym Expansion**: Expanding common acronyms (e.g., "lol" to "laugh out loud," "mh" to "mental health").
-* **Digit Handling**: Replacing specific digit-words (e.g., "gr8" to "great") and removing digits within other words.
-* **Repeated Character Reduction**: Reducing sequences of 3 or more identical characters to two (e.g., "oooooh" to "ooh").
-* **Punctuation and Special Character Removal**: Removing non-alphanumeric characters while preserving our custom tokens.
-* **Stopword Removal**: Eliminating common English stopwords (though noted that Transformer models can handle them).
-* **Lemmatization**: Reducing words to their base forms using spaCy (with NLTK as a fallback).
-* **Text Filtering**: Removing texts shorter than a specified minimum word count (e.g., 5 words) after cleaning.
-    * *Post-filtering Sample Sizes*: 35,957 training texts, 9,004 test texts.
-* **Label Distribution (Cleaned Training Data)**:
-    * Depression: 33.77%, Suicidal: 23.20%, Normal: 20.78%, Anxiety: 7.97%, Bipolar: 6.16%, Stress: 5.74%, Personality disorder: 2.39%.
+* **Text Cleaning**: Expanding contractions, replacing special tokens (URLs, mentions, hashtags), expanding acronyms, handling digits, reducing repeated characters, and removing punctuation.
+* **Linguistic Processing**: Removing stopwords and lemmatizing words (using spaCy/NLTK).
+* **Filtering**: Removing short texts (less than 5 words after cleaning).
+* **Label Distribution**: Analysis of sentiment class distribution (Depression: 33.77%, Suicidal: 23.20%, Normal: 20.78%, etc.).
 
 ### 📊 Exploratory Data Analysis (EDA)
 
-Comprehensive EDA was performed on the cleaned training data to understand sentiment distribution and key textual patterns. Visualizations generated include:
+Comprehensive EDA was performed to understand sentiment distribution and textual patterns. Visualizations generated include:
 
-* **Sentiment Distribution Bar and Pie Charts**: Visualizing the frequency and percentage breakdown of each sentiment class.
-* **Word Clouds**: Generated for each sentiment class to highlight prominent words.
-* **N-gram (Unigrams, Bigrams, Trigrams) Plots**: Displaying the most frequent word sequences for each sentiment.
+* **Sentiment Distribution Charts**: Bar and Pie charts.
+* **Word Clouds**: Per sentiment class.
+* **N-gram Plots**: Unigrams, Bigrams, and Trigrams per sentiment.
+Here is the Sentiment Distribution plot:
 
-**_Please insert your EDA plots here (e.g., sentiment distribution bar/pie charts, word clouds for each sentiment, N-gram visuals)._**
+<p align="center">
+  <img src="http://googleusercontent.com/image_collection/image_retrieval/180337826652365056" alt="Sentiment Distribution" width="600"/>
+</p>
 
 ### 🧪 Models Implemented
 
-This project explores both traditional machine learning and advanced deep learning approaches for sentiment classification.
+This project utilized both traditional machine learning and advanced deep learning models:
 
 1.  **Logistic Regression (Baseline Model)**
-    * **Vectorization**: Utilized TF-IDF (Term Frequency-Inverse Document Frequency) to convert text into numerical features (`max_features=5000`, `ngram_range=(1, 2)` for unigrams and bigrams).
-    * **Hyperparameter Tuning**: Performed using `GridSearchCV` with `f1_weighted` scoring, exploring various `solver` (`liblinear`, `saga`), `penalty` (`l1`, `l2`), `C` values, and `class_weight` settings.
+    * **Vectorization**: TF-IDF with `max_features=5000` and `ngram_range=(1, 2)`.
+    * **Hyperparameter Tuning**: `GridSearchCV` with `f1_weighted` scoring across various solvers, penalties, and C values.
 
 2.  **RoBERTa (Transformer Fine-Tuned)**
-    * **Model**: Employed `roberta-base` for sequence classification (`RobertaForSequenceClassification`).
-    * **Tokenizer**: Used `RobertaTokenizerFast` for efficient text tokenization and formatting.
-    * **Customization**: Configured with a custom `dropout rate: 0.2` for regularization (`hidden_dropout_prob`, `attention_probs_dropout_prob`) and a `target weight decay: 0.01`.
-    * **Loss Function**: Utilized `nn.CrossEntropyLoss` with dynamically computed `balanced` class weights (e.g., `[1.79, 2.32, 0.42, 0.69, 5.98, 2.49, 0.62]`) to effectively address class imbalance during training.
-    * **Optimizer**: `AdamW` with a specified learning rate and weight decay.
-    * **Learning Rate Scheduler**: Implemented `get_linear_schedule_with_warmup` (10% warmup steps out of 14,161 total training steps) for optimized learning rate adjustment.
-    * **Training Strategy**: Trained for 7 epochs, incorporating validation monitoring and early stopping (with `PATIENCE_EPOCHS`) to prevent overfitting. The model achieved a **best validation accuracy of 0.7386**.
+    * **Model**: Fine-tuned `roberta-base` for sequence classification.
+    * **Configuration**: Used `RobertaTokenizerFast`, custom `dropout rate: 0.2`, and `weight decay: 0.01`.
+    * **Training**: Employed `nn.CrossEntropyLoss` with balanced class weights, `AdamW` optimizer, and `linear warmup scheduler`. Trained for 7 epochs with validation monitoring and early stopping, achieving a **best validation accuracy of 0.7386**.
 
 ---
 
@@ -97,9 +88,9 @@ This project explores both traditional machine learning and advanced deep learni
 
 ### Confusion Matrix plot for the RoBERTa model
 
-Confusion matrices provide a detailed view of model performance, showing correct and incorrect classifications for each sentiment class.
-
-**_Please insert your Confusion Matrix plot for the RoBERTa model here (e.g., `roberta-base_confusion_matrix_test_reg.png`)._**
+<p align="center">
+  <img src="http://googleusercontent.com/image_collection/image_retrieval/17691559130873351206" alt="RoBERTa Confusion Matrix" width="600"/>
+</p>
 
 ---
 
@@ -120,6 +111,10 @@ The model can lovingly process raw text and output the predicted sentiment along
 * **Predicted Sentiment:** Depression
 * **Class Probabilities:**
     * Anxiety: 0.0011, Bipolar: 0.0012, **Depression: 0.9742**, Normal: 0.0023, Personality disorder: 0.0015, Stress: 0.0006, Suicidal: 0.0191
+
+<p align="center">
+  <img src="http://googleusercontent.com/image_collection/image_retrieval/16344389108313278817" alt="Prediction Example" width="400"/>
+</p>
 
 ---
 
