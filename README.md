@@ -1,4 +1,4 @@
-# 💖 Mental Health Sentiment Analysis using Deep Learning (RoBERTa)
+# Mental Health Sentiment Analysis using Deep Learning (RoBERTa) 💖
 
 ## 🌟 Project Overview
 
@@ -9,7 +9,7 @@ This project aims to classify mental health-related text into **seven distinct s
 Our goal is to provide a tool that can help in early detection and understanding, paving the way for timely support and intervention, and reminding us that behind every screen, there's a human story.
 
 <p align="center">
-  <img src="https://i.pinimg.com/736x/14/57/8e/14578edd117e0e6e99aebe86175953f9.jpg" alt="Mental Health Banner" width="300"/>
+  <img src="https://i.pinimg.com/736x/14/57/8e/14578edd117e0e6e99aebe86175953f9.jpg" alt="Mental Health Banner" width="360"/>
 </p>
 
 > Behind every message is a human story — and these tools can help make those voices heard.
@@ -58,9 +58,10 @@ Comprehensive EDA was performed to understand sentiment distribution and textual
 * **N-gram Plots**: Unigrams, Bigrams, and Trigrams per sentiment.
 Here is the Sentiment Distribution plot:
 
-<p align="center">
+<!--<p align="center">
   <img src="https://github.com/indranil143/Mental-Health-Sentiment-Analysis-using-Deep-Learning/blob/main/SS/Sentiment%20Distribution.png" alt="Sentiment Distribution" width="600"/>
 </p>
+-->
 
 ### 🧪 Models Implemented
 
@@ -84,14 +85,13 @@ This project utilized both traditional machine learning and advanced deep learni
 | Logistic Regression    | 71.00%   | 0.71     |
 | RoBERTa (fine-tuned)   | 75.33%   | 0.75     |
 
----
-
+<!--
 ### Confusion Matrix plot for the RoBERTa model
 
 <p align="center">
   <img src="https://github.com/indranil143/Mental-Health-Sentiment-Analysis-using-Deep-Learning/blob/main/SS/CM%20-%20RoBERTa.png" alt="RoBERTa Confusion Matrix" width="600"/>
 </p>
-
+-->
 ---
 
 ## ✨ Prediction Result Example
@@ -103,18 +103,26 @@ The model can lovingly process raw text and output the predicted sentiment along
 * **Cleaned Text:** "feel absolutely ecstatic overjoyed today everything wonderful"
 * **Predicted Sentiment:** Normal
 * **Class Probabilities:**
-    * Anxiety: 0.0111, Bipolar: 0.0693, Depression: 0.1111, **Normal: 0.7580**, Personality disorder: 0.0073, Stress: 0.0021, Suicidal: 0.0412
+    * Anxiety: 0.0111,
+    * Bipolar: 0.0693,
+    * Depression: 0.1111,
+    * **Normal: 0.7580**,
+    * Personality disorder: 0.0073,
+    * Stress: 0.0021,
+    * Suicidal: 0.0412
 
 **Example 2: Depression Sentiment**
 * **Original Text:** "The weight of this sadness is crushing me. I feel so empty and depressed."
 * **Cleaned Text:** "weight sadness crush feel empty depressed"
 * **Predicted Sentiment:** Depression
 * **Class Probabilities:**
-    * Anxiety: 0.0011, Bipolar: 0.0012, **Depression: 0.9742**, Normal: 0.0023, Personality disorder: 0.0015, Stress: 0.0006, Suicidal: 0.0191
-
-<p align="center">
-  <img src="https://github.com/indranil143/Mental-Health-Sentiment-Analysis-using-Deep-Learning/blob/main/SS/prediction%20example.png" alt="Prediction Example" width="400"/>
-</p>
+    * Anxiety: 0.0011,
+    *  Bipolar: 0.0012,
+    *  **Depression: 0.9742**,
+    *  Normal: 0.0023,
+    *  Personality disorder: 0.0015,
+    *  Stress: 0.0006,
+    *  Suicidal: 0.0191
 
 ---
 
@@ -122,16 +130,16 @@ The model can lovingly process raw text and output the predicted sentiment along
 
 To get this project up and running, follow these simple steps:
 
-# Clone the repository
+### Clone the repository
 ```bash
 git clone https://github.com/indranil143/Mental-Health-Sentiment-Analysis-using-Deep-Learning.git
 cd Mental-Health-Sentiment-Analysis-using-Deep-Learning
 ```
-# Install required libraries
+### Install required libraries
 ```bash
 pip install -r requirements.txt
 ```
-# Run the notebook
+### Run the notebook
 ```bash
 jupyter notebook Mental_Health_Sentiment_Analysis_(RoBERTa).ipynb
 ```
@@ -156,13 +164,15 @@ This project is open-source and available under the [MIT License](https://github
 
 ## 📧 Contact
 
-For any inquiries or collaborations, feel free to reach out. 🤝
+🤝 For any inquiries or collaborations, feel free to reach out to the project maintainer: 
 
----
+**indranil143**
+* GitHub: https://github.com/indranil143
+* Email: banerjeeindranil143@gmail.com
 
-This notebook is a compassionate application of deep learning to:
-* Classify mental health-related sentiments.
-* Amplify unseen emotional voices.
-* Enable proactive mental health support.
+If you need immediate help, please contact one of the following resources:
+- National Suicide Prevention Lifeline: 1-800-273-8255
+- Crisis Text Line: Text 'HELLO' to 741741
+- [More Resources](https://www.mentalhealth.gov/get-help/immediate-help)
 
-Join us as we explore the data with sensitivity, build powerful models with purpose, and unveil the emotional heartbeat of mental health text. Together, we can make a difference. 🤝✨
+> Join us as we explore the data with sensitivity, build powerful models with purpose, and unveil the emotional heartbeat of mental health text. Together, we can make a difference. 🤝✨
