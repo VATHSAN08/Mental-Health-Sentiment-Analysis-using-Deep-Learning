@@ -158,7 +158,7 @@ This project is an open invitation to join us in making a positive impact. Contr
 
 ## 📄 License
 
-This project is open-source and available under the [MIT License](https://github.com/indranil143/Mental-Health-Sentiment-Analysis-using-Deep-Learning/blob/main/LICENSE). You are free to modify and distribute the code, provided you acknowledge the original source.
+This project is open-source and available under the [MIT License](https://github.com/indranil143/Mental-Health-Sentiment-Analysis-using-Deep-Learning/blob/main/LICENSE).
 
 ---
 
