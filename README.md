@@ -59,7 +59,7 @@ Comprehensive EDA was performed to understand sentiment distribution and textual
 Here is the Sentiment Distribution plot:
 
 <p align="center">
-  <img src="http://googleusercontent.com/image_collection/image_retrieval/180337826652365056" alt="Sentiment Distribution" width="600"/>
+  <img src="https://github.com/indranil143/Mental-Health-Sentiment-Analysis-using-Deep-Learning/blob/main/SS/Sentiment%20Distribution.png" alt="Sentiment Distribution" width="600"/>
 </p>
 
 ### 🧪 Models Implemented
@@ -89,7 +89,7 @@ This project utilized both traditional machine learning and advanced deep learni
 ### Confusion Matrix plot for the RoBERTa model
 
 <p align="center">
-  <img src="http://googleusercontent.com/image_collection/image_retrieval/17691559130873351206" alt="RoBERTa Confusion Matrix" width="600"/>
+  <img src="https://github.com/indranil143/Mental-Health-Sentiment-Analysis-using-Deep-Learning/blob/main/SS/CM%20-%20RoBERTa.png" alt="RoBERTa Confusion Matrix" width="600"/>
 </p>
 
 ---
@@ -113,7 +113,7 @@ The model can lovingly process raw text and output the predicted sentiment along
     * Anxiety: 0.0011, Bipolar: 0.0012, **Depression: 0.9742**, Normal: 0.0023, Personality disorder: 0.0015, Stress: 0.0006, Suicidal: 0.0191
 
 <p align="center">
-  <img src="http://googleusercontent.com/image_collection/image_retrieval/16344389108313278817" alt="Prediction Example" width="400"/>
+  <img src="https://github.com/indranil143/Mental-Health-Sentiment-Analysis-using-Deep-Learning/blob/main/SS/prediction%20example.png" alt="Prediction Example" width="400"/>
 </p>
 
 ---
@@ -150,7 +150,7 @@ This project is an open invitation to join us in making a positive impact. Contr
 
 ## 📄 License
 
-This project is open-source and available under the [MIT License](https://opensource.org/licenses/MIT). You are free to modify and distribute the code, provided you acknowledge the original source.
+This project is open-source and available under the [MIT License](https://github.com/indranil143/Mental-Health-Sentiment-Analysis-using-Deep-Learning/blob/main/LICENSE). You are free to modify and distribute the code, provided you acknowledge the original source.
 
 ---
 
@@ -166,4 +166,3 @@ This notebook is a compassionate application of deep learning to:
 * Enable proactive mental health support.
 
 Join us as we explore the data with sensitivity, build powerful models with purpose, and unveil the emotional heartbeat of mental health text. Together, we can make a difference. 🤝✨
-```
