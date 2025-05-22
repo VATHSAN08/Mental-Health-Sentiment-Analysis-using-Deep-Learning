@@ -170,9 +170,10 @@ This project is open-source and available under the [MIT License](https://github
 * GitHub: https://github.com/indranil143
 * Email: banerjeeindranil143@gmail.com
 
-If you need immediate help, please contact one of the following resources:
+If you or someone you know needs immediate help, please contact one of the following resources:
 - National Suicide Prevention Lifeline: 1-800-273-8255
-- Crisis Text Line: Text 'HELLO' to 741741
-- [More Resources](https://www.mentalhealth.gov/get-help/immediate-help)
+- Crisis Text Line: Text 'HOME' to 741741
+- National Alliance on Mental Illness (NAMI) HelpLine: Call 1-800-950-NAMI (6264) or text 'NAMI' to 62640. ([nami.org](https://www.nami.org/))
+- [More Resources](https://www.helpguide.org/find-help/mental-health/mental-health-helplines/)
 
 > Join us as we explore the data with sensitivity, build powerful models with purpose, and unveil the emotional heartbeat of mental health text. Together, we can make a difference. 🤝✨
